@@ -1,4 +1,4 @@
-export const  Colors={
+export  const  Colors={
     main:"#48b600",
     white:"#ffffff",
     black:"#000",
@@ -11,5 +11,6 @@ export const  Colors={
     deepestGray:"#c4c4c4",
     blue:"#3b87f9",
     underline:"#e5e5e5",
-    paypal:"#ffb730"
+    paypal:"#ffb730",
+    lightGreen:"#90EE90"
 }
