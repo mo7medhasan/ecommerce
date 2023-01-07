@@ -1,6 +1,6 @@
 import { Box, Flex, Heading, Image, Pressable, ScrollView, Text } from "native-base";
 import { Colors } from "../color";
-import { products } from "../data/Progucts";
+import { products } from "../data/Products";
 import Rating from "./Rating";
 
 export default function HomeProducts() {
