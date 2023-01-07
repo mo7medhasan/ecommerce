@@ -3,7 +3,7 @@ import { createNativeStackNavigator } from "@react-navigation/native-stack";
 import { NativeBaseProvider, Box, StatusBar } from "native-base";
 import { I18nManager } from "react-native"
 import BottomNav from "./src/Navigations/BottomNav";
-import CartScreen from "./src/Screens/CartScreen";
+import ProfileScreen from "./src/Screens/ProfileScreen";
 import LoginScreen from "./src/Screens/LoginScreen";
 import RegisterScreen from "./src/Screens/RegisterScreen";
 
@@ -14,7 +14,7 @@ I18nManager.allowRTL(false);
 export default function App() {
   return (
     <NativeBaseProvider>
-    <CartScreen/>
+    <ProfileScreen/>
 
     </NativeBaseProvider>
   );
