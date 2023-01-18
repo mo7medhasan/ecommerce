@@ -4,6 +4,7 @@ import { Colors } from '../color'
 import OrderInfo from '../Components/OrderInfo'
 import  {FontAwesome,FontAwesome5,Ionicons}  from "@expo/vector-icons" 
 import OrderItem from '../Components/OrderItem'
+import PlaceOrderModel from '../Components/PlaceOrderModel'
 export default function PlaceOrderScreen() {
   return (
     <Box flex={1} bg={Colors.subGreen} safeArea pt={6} >
@@ -29,6 +30,8 @@ export default function PlaceOrderScreen() {
           PRODUCTS
         </Heading>
         <OrderItem />
+        {/* total */}
+        <PlaceOrderModel/>
       </Box>
     </Box>
   )
