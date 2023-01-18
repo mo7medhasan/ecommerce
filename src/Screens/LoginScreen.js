@@ -12,7 +12,7 @@ import React from "react";
 import { Colors } from "../color";
 import { MaterialIcons, Ionicons } from "@expo/vector-icons";
 
-export default function LoginScreen() {
+export default function LoginScreen({navigation }) {
   return (
     <Box flex={1} bg={Colors.black}>
       <Image
@@ -64,10 +64,11 @@ export default function LoginScreen() {
           w={"40%"}
           rounded={50}
           bg={Colors.blue}
+          onPress={()=>navigation.navigate("Bottom")}
         >
           LOGIN
         </Button>
-        <Pressable mt={4}>
+        <Pressable mt={4}  onPress={()=>navigation.navigate("Register")}>
           <Text color={Colors.gray} >SIGN UP</Text>
         </Pressable>
       </Box>

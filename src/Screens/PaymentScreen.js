@@ -13,6 +13,7 @@ import React from "react";
 import { Colors } from "../color";
 import Buttone from "../Components/Button";
 import { Ionicons, FontAwesome } from "@expo/vector-icons";
+import { useNavigation } from "@react-navigation/native";
 
 const paymentMethods = [
   { image:require( "../../assets/images/PayPal.png"), alt: "PayPal", icon: "Ionicons" },
@@ -20,6 +21,8 @@ const paymentMethods = [
   { image:require( "../../assets/images/sepa.png"), alt: "sepa", icon: "FontAwesome" },
 ];
 export default function PaymentScreen() {
+  const navigation=useNavigation()
+
   return (
     <Box flex={1} safeArea bg={Colors.main} py={5}>
       {/*Header  */}
@@ -54,7 +57,7 @@ export default function PaymentScreen() {
               :(<FontAwesome name="circle-thin" size={30} color={Colors.main} />)}
              
             </HStack>))}
-            <Buttone bg={Colors.main} color={Colors.white} mt={5}>
+            <Buttone bg={Colors.main} color={Colors.white} mt={5} onPress={()=>navigation.navigate("Placeorder")}>
               CONTINUE
             </Buttone>
             <Text italic textAlign={"center"}>

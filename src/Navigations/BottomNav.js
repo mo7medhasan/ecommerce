@@ -15,18 +15,27 @@ import {
   MaterialCommunityIcons,
 } from "@expo/vector-icons";
 import { StyleSheet } from "react-native";
+import CartScreen from "../Screens/CartScreen";
+import StackNav from "./StackNav";
 const Tab = createBottomTabNavigator();
 const CustomTab = ({ children, onPress }) => (
-<Pressable onPress={onPress}  w={70}  h={70} rounded="full"
-bg={Colors.main} top={-30} shadow={2}>
+  <Pressable
+    onPress={onPress}
+    w={70}
+    h={70}
+    rounded="full"
+    bg={Colors.main}
+    top={-30}
+    shadow={2}
+  >
     {children}
-</Pressable>
-    );
+  </Pressable>
+);
 export default function BottomNav() {
   return (
     <Tab.Navigator
-      backBehavior="main"
-      initialRouteName="main"
+      backBehavior="Main"
+      initialRouteName="Main"
       screenOptions={{
         tabBarShowLabel: false,
         tabBarStyle: { ...styles.tab },
@@ -36,7 +45,7 @@ export default function BottomNav() {
     >
       <Tab.Screen
         name="Main"
-        component={HomeScreen}
+        component={StackNav}
         options={{
           tabBarIcon: ({ focused }) => (
             <Center>
@@ -53,13 +62,15 @@ export default function BottomNav() {
 
       <Tab.Screen
         name="Cart"
-        component={SingleProductScreen}
+        component={CartScreen}
         options={{
-            tabBarButton:(props)=><CustomTab {...props} />,
+          tabBarButton: (props) => <CustomTab {...props} />,
           tabBarIcon: ({ focused }) => (
             <Center>
               {focused ? (
-                <FontAwesome5 name="shopping-basket" size={24}
+                <FontAwesome5
+                  name="shopping-basket"
+                  size={24}
                   color={Colors.white}
                 />
               ) : (
@@ -76,7 +87,7 @@ export default function BottomNav() {
       {/* profile */}
       <Tab.Screen
         name="Profile"
-        component={LoginScreen}
+        component={ProfileScreen}
         options={{
           tabBarIcon: ({ focused }) => (
             <Center>
