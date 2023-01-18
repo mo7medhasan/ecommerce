@@ -115,7 +115,7 @@ export const products = [
     description:
       "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Quisque vitae vestibulum est. Aliquam elementum aliquet eros quis egestas. Integer volutpat, dui quis blandit lacinia, ligula leo aliquet nibh, ac imperdiet ligula dolor et diam. Sed in tellus sapien. Suspendisse massa lorem, ",
     price: 89,
-    countInStock: 3,
+    countInStock: 0,
     rating: 0.5,
     numReviews: 4,
   },
