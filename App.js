@@ -7,16 +7,18 @@ import BottomNav from "./src/Navigations/BottomNav";
 import LoginScreen from "./src/Screens/LoginScreen";
 import OrderScreen from "./src/Screens/OrderScreen";
 import RegisterScreen from "./src/Screens/RegisterScreen";
+import FavoritesContextProvider from "./store/context/FavoritesContext";
 
 
 
 const  Stack=createNativeStackNavigator();
 I18nManager.allowRTL(false);
 export default function App() {
-  return (
-    <NativeBaseProvider>
-       <NavigationContainer>
+  return (<>
         <StatusBar hidden={true}/>
+  
+     <FavoritesContextProvider>  <NativeBaseProvider>
+       <NavigationContainer>
         <Stack.Navigator initialRouteName="Login" screenOptions={{
           headerShown:false,
         }}>
@@ -27,8 +29,8 @@ export default function App() {
           <Stack.Screen name="Bottom" component={BottomNav}/>
        
         </Stack.Navigator>
-      </NavigationContainer> 
-    </NativeBaseProvider>
+      </NavigationContainer>
+    </NativeBaseProvider></FavoritesContextProvider></>
   );
 }
    

@@ -1,11 +1,12 @@
 import { Box, Button, Center, HStack, ScrollView, Text } from "native-base";
-import React from "react";
+import React, { useContext } from "react";
 import { Colors } from "../color";
 import Buttone from "../Components/Button";
 // import CartEmpty from "../Components/CartEmpty";
 import CartItems from "../Components/CartItems";
 
 export default function CartScreen() {
+
   return (
     <Box flex={1} safeArea bg={Colors.subGreen}>
       {/* Header */}
@@ -18,7 +19,7 @@ export default function CartScreen() {
       <CartEmpty/>*/}
       {/* CART ITEMS */}
       <ScrollView showsVerticalScrollIndicator={false}>
-        <CartItems />
+        <CartItems/>
         {/* buttons */}
         {/* Total */}
         <Center mt={5}>
@@ -32,18 +33,22 @@ export default function CartScreen() {
             h={45}
             alignItems="center"
           >
-            <Text>
-              Total
-            </Text>
-<Button px={10} h={45}  rounded={50} bg={Colors.main} _text={{color:Colors.white,fontWeight:"semibold"}}
-_pressed={{bg:Colors.main,}}>
-$356
-</Button>
+            <Text>Total</Text>
+            <Button
+              px={10}
+              h={45}
+              rounded={50}
+              bg={Colors.main}
+              _text={{ color: Colors.white, fontWeight: "semibold" }}
+              _pressed={{ bg: Colors.main }}
+            >
+              $356
+            </Button>
           </HStack>
         </Center>
         {/* CheckOut */}
         <Center px={5}>
-          <Buttone bg={Colors.black} color={Colors.white} mt={10} >
+          <Buttone bg={Colors.black} color={Colors.white} mt={10}>
             CHECKOUT
           </Buttone>
         </Center>
