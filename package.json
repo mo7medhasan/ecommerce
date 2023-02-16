@@ -15,6 +15,7 @@
     "@react-navigation/material-bottom-tabs": "^6.2.10",
     "@react-navigation/native": "^6.1.1",
     "@react-navigation/native-stack": "^6.9.7",
+    "@reduxjs/toolkit": "^1.9.2",
     "expo": "~47.0.9",
     "expo-status-bar": "~1.4.2",
     "native-base": "^3.4.25",
@@ -30,7 +31,9 @@
     "react-native-swipe-list-view": "^3.2.9",
     "react-native-tab-view": "^3.3.4",
     "react-native-vector-icons": "^9.2.0",
-    "react-native-web": "~0.18.9"
+    "react-native-web": "~0.18.9",
+    "react-redux": "^8.0.5",
+    "redux": "^4.2.1"
   },
   "devDependencies": {
     "@babel/core": "^7.12.9"
