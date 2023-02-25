@@ -6,8 +6,8 @@ import HomeProducts from '../Components/HomeProducts'
 import HomeSearch from '../Components/HomeSearch'
 
 export default function HomeScreen() {
-const favoriteIds=useContext(FavoritesContext)
-console.log(favoriteIds.ids);
+// const favoriteIds=useContext(FavoritesContext)
+// console.log(favoriteIds.ids);
   return (
     <Box flex={1} bg={Colors.subGreen}>
      <HomeSearch/>

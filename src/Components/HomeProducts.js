@@ -1,11 +1,15 @@
 import { useNavigation } from "@react-navigation/native";
 import { Box, Flex, Heading, Image, Pressable, ScrollView, Text } from "native-base";
+import { useGetProductsQuery } from "../../store/redux/product";
 import { Colors } from "../color";
-import { products } from "../data/Products";
+// import { products } from "../data/Products";
 import Rating from "./Rating";
 
 export default function HomeProducts() {
   const navigation=useNavigation()
+
+const{data: products}=useGetProductsQuery();
+
   return (
     <ScrollView flex={1} showsVerticalScrollIndicator={false}>
       <Flex
@@ -14,7 +18,7 @@ export default function HomeProducts() {
         justifyContent={"space-between"}
         px={6}
       >
-        {products.map((product, index) => (
+        {products&&Object.values(products).map((product, index) => (
           <Pressable
           onPress={()=>navigation.navigate("Single",product)}
             key={product.id}
@@ -27,7 +31,7 @@ export default function HomeProducts() {
             overflow="hidden"
             pt={0.3}
           >
-          <Image source={{uri:product.image}} alt={product.name} w="full"  h={24} resizeMode="contain"/>
+          <Image source={{uri:product.picture}} alt={product.name} w="full"  h={24} resizeMode="contain"/>
          <Box px={4} pt={1}>
             <Heading size="sm" bold>
             ${product.price}
@@ -35,12 +39,13 @@ export default function HomeProducts() {
             <Text fontSize={10}mt={1} isTruncated w="full">
                 {product.name}
             </Text>
-            {/* rating */}
-            <Rating valve={product.rating}/>
-            </Box> 
-          </Pressable>
+        </Box> 
+          </Pressable> 
         ))}
       </Flex>
     </ScrollView>
   );
 }
+  //  <Rating valve={product.rating}/>
+  //          
+  //            {/* rating */}

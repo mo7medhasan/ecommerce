@@ -8,12 +8,12 @@ import { createApi, fetchBaseQuery } from '@reduxjs/toolkit/query/react'
 // })
 export const productsApi = createApi({
   reducerPath: 'productsApi',
-  baseQuery: fetchBaseQuery({ baseUrl: 'https://ecom-fake-api.onrender.com/products' }),
-  endpoints: (builder) => ({
-    getProducts: builder.query({
-      query: () => `/`,
+  baseQuery: fetchBaseQuery({ baseUrl: 'https://ecom-fake-api.onrender.com' }),
+  endpoints: ({ query, mutation }) => ({
+    getProducts: query({
+      query: () => `/products`,
     }),
   }),
 })
 
-export const { useGetProductsQuery,  } = productApi
+export const { useGetProductsQuery  } = productsApi

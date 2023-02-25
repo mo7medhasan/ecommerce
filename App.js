@@ -13,17 +13,17 @@ import { store } from "./store/redux/Store";
 
 const Stack = createNativeStackNavigator();
 I18nManager.allowRTL(false);
-export default function App() {
+ function App() {
   return (
     <>
       <StatusBar hidden={true} />
 
       {/* <FavoritesContextProvider> */}
-        <Provider store={store}>
+    
         <NativeBaseProvider>
           <NavigationContainer>
             <Stack.Navigator
-              initialRouteName="Login"
+              initialRouteName="Bottom"
               screenOptions={{
                 headerShown: false,
               }}
@@ -36,8 +36,17 @@ export default function App() {
             </Stack.Navigator>
           </NavigationContainer>
         </NativeBaseProvider>
-        </Provider>
+       
+      
       {/* </FavoritesContextProvider> */}
     </>
   );
 }
+
+
+export default () => {
+  return (
+    <Provider store={store}>
+      <App />
+    </Provider>
+  );}
