@@ -20,7 +20,7 @@ const{data: products}=useGetProductsQuery();
       >
         {products&&Object.values(products).map((product, index) => (
           <Pressable
-          onPress={()=>navigation.navigate("Single",product)}
+          onPress={()=>navigation.navigate("Single",product.id)}
             key={product.id}
             w="47%"
             bg={Colors.white}

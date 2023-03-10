@@ -10,17 +10,18 @@ import {
   VStack,
 } from "native-base";
 import { SwipeListView } from "react-native-swipe-list-view";
-import { products } from "../data/Products";
+// import { products } from "../data/Products";
 import { Colors } from "../color";
 import { FontAwesome } from "@expo/vector-icons";
 import { FavoritesContext } from "../../store/context/FavoritesContext";
-const Swiper = ({favoriteIds}) => (
+const Swiper = ({products,favoriteIds}) => (
+
   <SwipeListView
     rightOpenValue={-50}
     previewRowKey="0"
     previewOpenValue={-40}
     previewOpenDelay={3000}
-    data={products.filter(obj => favoriteIds.ids.includes(obj.id))}
+    data={products.slice(3,0)}
     renderItem={RenderItems}
     renderHiddenItem={HiddenItems}
     showsVerticalScrollIndicator={false}
@@ -86,11 +87,12 @@ const HiddenItems = () => (
 );
 
 export default function CartItems() {
-  const favoriteIds = useContext(FavoritesContext);
-
+  // const favoriteIds = useContext(FavoritesContext);
+  const{data: products}=useGetProductsQuery();
+  
   return (
     <Box mr={6} flex={1}>
-      <Swiper favoriteIds={favoriteIds} />
+      <Swiper favoriteIds={favoriteIds} products={products} />
     </Box>
   );
 }
