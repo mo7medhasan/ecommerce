@@ -1,11 +1,11 @@
-#E-commerce App using React Native
+# E-commerce App using React Native
 This is an eCommerce mobile application built using React Native and Expo. It includes features such as product listings, cart management, and checkout.
 ## Getting Started
 To get started with this app, first, clone the repository from GitHub:
 # `git clone https://github.com/mo7medhasan/ecommerce.git`
 # `cd ecommerce`
 
-##Prerequisites
+## Prerequisites
 Before running the app, you must have the following installed:
 
 Node.js
