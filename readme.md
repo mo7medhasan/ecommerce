@@ -12,7 +12,7 @@ Node.js
 npm
 Expo CLI
 
-###Installing
+### Installing
 Install the app's dependencies using npm:
 ### ```bash npx expo install ||  yarn install || npm install```
 ## Running the app
@@ -30,11 +30,11 @@ Alternatively, you can run the app on a specific platform by running one of the 
 
 These commands will start the app on an Android emulator, iOS simulator, or in a web browser, respectively.
 
-##Built With
-(`React Native`)[https://reactnative.dev/] - A JavaScript library for building native mobile apps.
-(`Expo`)[https://expo.io/] - A platform for building and deploying universal apps.
-(`Redux`)[https://redux.js.org/] - A predictable state container for JavaScript apps.
-(`React Navigation`)[https://reactnavigation.org/] - A routing and navigation library for React Native.
-##Acknowledgments
+## Built With
+(React Native)[https://reactnative.dev/] - A JavaScript library for building native mobile apps.
+(Expo)[https://expo.io/] - A platform for building and deploying universal apps.
+(Redux)[https://redux.js.org/] - A predictable state container for JavaScript apps.
+(React Navigation)[https://reactnavigation.org/] - A routing and navigation library for React Native.
+## Acknowledgments
 This app was built as part of a tutorial on building an eCommerce app with React Native and Redux.
 
