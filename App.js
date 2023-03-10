@@ -9,7 +9,7 @@ import LoginScreen from "./src/Screens/LoginScreen";
 import OrderScreen from "./src/Screens/OrderScreen";
 import RegisterScreen from "./src/Screens/RegisterScreen";
 import FavoritesContextProvider from "./store/context/FavoritesContext";
-import { store } from "./store/redux/Store";
+import { store } from "./store/redux/store";
 
 const Stack = createNativeStackNavigator();
 I18nManager.allowRTL(false);
