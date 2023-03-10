@@ -11,6 +11,7 @@ Before running the app, you must have the following installed:
 Node.js
 npm
 Expo CLI
+
 ###Installing
 Install the app's dependencies using npm:
 ### ```bash npx expo install ||  yarn install || npm install```
