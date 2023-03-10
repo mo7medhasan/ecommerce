@@ -1,7 +1,7 @@
 # E-commerce App using React Native
 This is an eCommerce mobile application built using React Native and Expo. It includes features such as product listings, cart management, and checkout.
 
-## (peview)[https://snack.expo.dev/@mo7med/github.com-mo7medhasan-ecommerce] 
+## [Peview] (https://snack.expo.dev/@mo7med/github.com-mo7medhasan-ecommerce)
 
 ## Getting Started
 To get started with this app, first, clone the repository from GitHub:
